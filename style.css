@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f9;
+}
+
+.pos-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT PANEL (Products) */
+.left-panel {
+    flex: 2;
+    padding: 20px;
+    background: #ffffff;
+    overflow-y: auto;
+}
+
+.add-product {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.add-product input {
+    padding: 8px;
+    flex: 1;
+}
+
+.add-product button {
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    border: none;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.product-grid button {
+    padding: 15px;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.product-grid button:disabled {
+    background: gray;
+}
+
+/* RIGHT PANEL (Cart) */
+.right-panel {
+    flex: 1;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#cart-list {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    overflow-y: auto;
+}
+
+#cart-list li {
+    background: #34495e;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* BUTTONS IN CART */
+#cart-list button {
+    margin: 3px;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+.summary {
+    border-top: 2px solid #fff;
+    padding-top: 15px;
+}
+
+.summary input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background: #e67e22;
+    border: none;
+    color: white;
+    font-size: 16px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple POS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div style="background:#1a252f;color:white;padding:10px;">
+    <h2>My Store POS</h2>
+</div>
+
+<body>
+
+    <div class="pos-container">
+
+        <!-- LEFT: PRODUCTS -->
+        <div class="left-panel">
+            <h2>Products</h2>
+
+            <div class="add-product">
+                <input type="text" id="pname" placeholder="Product name">
+                <input type="number" id="pprice" placeholder="Price">
+                <input type="number" id="pstock" placeholder="Stock">
+                <button onclick="addProduct()">Add</button>
+            </div>
+
+            <div id="product-list" class="product-grid"></div>
+        </div>
+
+        <!-- RIGHT: CART -->
+        <div class="right-panel">
+            <h2>Cart</h2>
+
+            <ul id="cart-list"></ul>
+
+            <div class="summary">
+                <h3>Total: ₱<span id="total">0</span></h3>
+
+                <input type="number" id="cash" placeholder="Enter cash">
+                <h3>Change: ₱<span id="change">0</span></h3>
+
+                <button class="checkout-btn" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
